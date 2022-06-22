@@ -21,7 +21,30 @@ Route::get('/', function () {
     ];
 
 
+
     return view('home', $user);
+});
+Route::get('/', function () {
+
+    $data = [
+        'students' => [
+            'Ugo',
+            'Pino',
+            'Gianni',
+            'Martina'
+        ],
+
+        'teachers' => [
+            'Stefano',
+            'Simone',
+            'Giovanni',
+            'Sofia'
+        ]
+    ];
+
+
+
+    return view('home', $data);
 });
 
 
