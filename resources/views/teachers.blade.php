@@ -10,13 +10,15 @@
 
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-  <title>Home</title>
+  <title>Teachers</title>
 </head>
 <body>
 
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
-        <a class="navbar-brand" href="#">Laravel</a>
+        <a class="navbar-brand" href="{{ URL::route('home') }}">
+            <img class="logo-laravel" src="https://www.coine.it/wp-content/uploads/2022/03/laravel-featured.png" alt="logo Laravel">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
