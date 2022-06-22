@@ -51,7 +51,13 @@
                 <h5 class="card-title">Teachers list</h5>
 
                 @foreach ($teachers as $teacher)
-                    <h6 class="card-subtitle mb-2">Name: {{$teacher}} </h6>
+                    @if ($loop->first)
+                        <h6 class="card-subtitle mb-2">Name: {{$teacher}} (sono il primo insegnante) </h6>
+                    @elseif ($loop->last)
+                    <h6 class="card-subtitle mb-2">Name: {{$teacher}} (sono l'ultimo insegnante) </h6>
+                    @else
+                        <h6 class="card-subtitle mb-2">Name: {{$teacher}} </h6>
+                    @endif
                 @endforeach
 
             </div>
