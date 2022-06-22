@@ -23,8 +23,10 @@ Route::get('/', function () {
 
 
     return view('home', $user);
-});
-Route::get('/', function () {
+})->name('home');
+
+
+Route::get('/students', function () {
 
     $data = [
         'students' => [
@@ -32,19 +34,26 @@ Route::get('/', function () {
             'Pino',
             'Gianni',
             'Martina'
-        ],
+        ]
+    ];
 
+
+    return view('students', $data);
+})->name('students');
+
+
+Route::get('/teachers', function () {
+
+   $data = [
         'teachers' => [
             'Stefano',
             'Simone',
             'Giovanni',
             'Sofia'
         ]
-    ];
+   ];
 
-
-
-    return view('home', $data);
-});
+    return view('teachers', $data);
+})->name('teachers');
 
 

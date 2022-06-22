@@ -42,13 +42,16 @@
 
     <div class="content d-flex flex-column align-items-center">
 
-        <h1 class="m-5">Hello World</h1>
+        <h1 class="m-5">Students</h1>
 
         <div class="card p-3">
             <div class="card-body">
-                <h5 class="card-title">User</h5>
-                <h6 class="card-subtitle mb-2">Name: {{$name}} </h6>
-                <p class="card-text">Age: {{$age}} </p>
+                <h5 class="card-title">Students list</h5>
+
+                @foreach ($students as $student)
+                    <h6 class="card-subtitle mb-2">Name: {{$student}} </h6>
+                @endforeach
+
             </div>
         </div>
 
