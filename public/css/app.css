@@ -1,0 +1,13 @@
+body {
+  background-color: rgba(254, 18, 1, 0.6666666667);
+}
+
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.logo-laravel {
+  width: 150px;
+}
+
